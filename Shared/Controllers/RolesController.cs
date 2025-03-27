@@ -2,6 +2,6 @@
 {
     public static class RolesController
     {
-        private static string route = "api/Roles/";
+        private const string route = "api/Roles/";
     }
 }

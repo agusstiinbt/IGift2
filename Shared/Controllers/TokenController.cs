@@ -2,8 +2,8 @@
 {
     public static class TokenController
     {
-        private static string route = "api/Token/";
-        public static string LogIn = route + "Login";
-        public static string RefreshToken = route + "RefreshToken";
+        private const string route = "api/Token/";
+        public const string LogIn = route + "Login";
+        public const string RefreshToken = route + "RefreshToken";
     }
 }

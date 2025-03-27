@@ -2,10 +2,10 @@
 {
     public static class ChatController
     {
-        private static string route = "api/Chat/";
+        private const string route = "api/Chat/";
 
-        public static string LoadChatUsers = route + "LoadChatUsers";
-        public static string GetChatById = route + "GetChatById";
-        public static string SaveMessage = route + "SaveMessage";
+        public const string LoadChatUsers = route + "LoadChatUsers";
+        public const string GetChatById = route + "GetChatById";
+        public const string SaveMessage = route + "SaveMessage";
     }
 }

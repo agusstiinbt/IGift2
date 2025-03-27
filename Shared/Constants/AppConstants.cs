@@ -19,9 +19,9 @@
             //TODO esto va a estar en una bbdd
             #region A reemplazar con BBDD
 
-            public static List<string> listaDesconectado = new List<string>() { "Ofertas", "Peticiones", "Categorias", "Electrodomesticos", "Historial", "Ayuda" };
+            public static List<string> listaDesconectado = ["Ofertas", "Peticiones", "Categorias", "Electrodomesticos", "Historial", "Ayuda"];
 
-            public static List<string> listaConectado = new List<string>() { "Ofertas", "Categorias", "Chat", "Peticiones", "Electrodomesticos", "Historial", "Ayuda", "Ofertas Grandes" };
+            public static List<string> listaConectado = ["Ofertas", "Categorias", "Chat", "Peticiones", "Electrodomesticos", "Historial", "Ayuda", "Ofertas Grandes"];
 
             #endregion
         }

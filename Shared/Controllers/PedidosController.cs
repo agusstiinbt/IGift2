@@ -2,7 +2,7 @@
 {
     public static class PedidosController
     {
-        private static string route = "api/Pedidos/";
-        public static string GetAll = route + "GetAll";
+        private const string route = "api/Pedidos/";
+        public const string GetAll = route + "GetAll";
     }
 }

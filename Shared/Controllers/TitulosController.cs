@@ -2,9 +2,9 @@
 {
     public static class TitulosController
     {
-        private static string route = "api/Titulos/";
+        private const string route = "api/Titulos/";
 
-        public static string GetBarraHerramientasDesconectado = route + "GetBarraHerramientasDesconectado";
-        public static string GetBarraHerramientasConectado = route + "GetBarraHerramientasConectado";
+        public const string GetBarraHerramientasDesconectado = route + "GetBarraHerramientasDesconectado";
+        public const string GetBarraHerramientasConectado = route + "GetBarraHerramientasConectado";
     }
 }

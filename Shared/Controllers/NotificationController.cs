@@ -2,7 +2,7 @@
 {
     public static class NotificationController
     {
-        private static string route = "api/Notification";
-        public static string GetAll = route;
+        private const string route = "api/Notification";
+        public const string GetAll = route;
     }
 }

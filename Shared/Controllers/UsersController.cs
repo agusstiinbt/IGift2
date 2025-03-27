@@ -2,14 +2,14 @@
 {
     public static class UsersController
     {
-        private static string route = "api/Users/";
+        private const string route = "api/Users/";
 
-        public static string GetAll = route + "GetAll";
-        public static string Register = route + "Register";
-        public static string GetById = route + "GetById";
-        public static string ChangeUserStatus = route + "ChangeUserStatus";
-        public static string ForgotPassword = route + "ForgotPassword";
-        public static string GetRolesFromUserId = route + "GetRolesFromUserId";
-        public static string UpdateRolesFromUser = route + "UpdateRolesFromUser";
+        public const string GetAll = route + "GetAll";
+        public const string Register = route + "Register";
+        public const string GetById = route + "GetById";
+        public const string ChangeUserStatus = route + "ChangeUserStatus";
+        public const string ForgotPassword = route + "ForgotPassword";
+        public const string GetRolesFromUserId = route + "GetRolesFromUserId";
+        public const string UpdateRolesFromUser = route + "UpdateRolesFromUser";
     }
 }

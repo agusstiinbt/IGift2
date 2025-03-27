@@ -2,9 +2,9 @@
 {
     public static class FilesController
     {
-        private static string route = "api/Files/";
+        private const string route = "api/Files/";
 
-        public static string GetProfilePictureById = route + "GetProfilePictureById";
-        public static string UploadProfilePicture = route + "UploadProfilePicture";
+        public const string GetProfilePictureById = route + "GetProfilePictureById";
+        public const string UploadProfilePicture = route + "UploadProfilePicture";
     }
 }
