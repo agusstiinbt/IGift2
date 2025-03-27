@@ -4,6 +4,7 @@ using Application.Responses.Titulos.Categoria;
 using Application.Responses.Titulos.Desconectado;
 using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Shared.Wrappers;
 
 namespace Application.CQRS.Titulos.Desconectado

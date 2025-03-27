@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using AutoMapper;
+using Domain.Contracts;
 
 namespace Application.Interfaces.Repositories
 {
@@ -27,6 +28,5 @@ namespace Application.Interfaces.Repositories
         Task<IQueryable<TDto>> GetAllMapAsyncQuery<TDto>(IMapper mapper) where TDto : class;
 
         Task<Task> DeleteAsync(T entity);
-        Task GetAllMapAsyncQuery<T1>(IMapper mapper);
     }
 }

@@ -3,6 +3,7 @@ using Application.Responses.Titulos.Categoria;
 using Application.Responses.Titulos.Conectado;
 using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Shared.Wrappers;
 
 namespace Application.CQRS.Titulos.Conectado

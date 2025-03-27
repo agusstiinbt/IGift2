@@ -4,6 +4,7 @@ using Application.Models;
 using Application.Responses.Notification;
 using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Shared.Wrappers;
 namespace Application.CQRS.Notifications.Query
 {
