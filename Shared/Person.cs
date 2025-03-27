@@ -39,4 +39,18 @@ namespace Shared
             return new List<Person>();
         }
     }
+
+    public class PersonServiceServer : IPersonService
+    {
+        public async Task<List<Person>> GetPeopleAsync()
+        {
+            var lista = new List<Person>()
+            {
+                new Person(){Nombre="Agustin",Apellido="Esposito" },
+                new Person(){Nombre="Lucia",Apellido="Esposito" },
+                new Person(){Nombre="Jose",Apellido="Esposito" },
+            };
+            return await Task.FromResult(lista);
+        }
+    }
 }

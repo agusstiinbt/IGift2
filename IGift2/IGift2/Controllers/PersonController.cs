@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using Shared;
 
 namespace IGift2.Controllers
@@ -7,15 +8,17 @@ namespace IGift2.Controllers
     [ApiController]
     public class PersonController : ControllerBase
     {
-        [HttpGet("GetAll")]
-        public ActionResult GetAll()
+        private readonly IPersonService _personService;
+
+        public PersonController(IPersonService personService)
         {
-            var lista = new List<Person>()
-            {
-                new Person(){Nombre="Agustin",Apellido="Esposito" },
-                new Person(){Nombre="Lucia",Apellido="Esposito" },
-                new Person(){Nombre="Jose",Apellido="Esposito" },
-            };
+            _personService = personService;
+        }
+
+        [HttpGet("GetAll")]
+        public async Task<ActionResult> GetAll()
+        {
+            var lista = await _personService.GetPeopleAsync();
             return Ok(lista);
         }
     }
