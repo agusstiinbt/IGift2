@@ -1,4 +1,4 @@
-﻿namespace Application..Responses.Files
+﻿namespace Application.Responses.Files
 {
     public class ProfilePictureResponse
     {

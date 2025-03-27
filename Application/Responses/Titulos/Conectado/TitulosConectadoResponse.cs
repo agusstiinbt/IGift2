@@ -1,4 +1,4 @@
-﻿namespace Application..Responses.Titulos.Conectado
+﻿namespace Application.Responses.Titulos.Conectado
 {
     public class TitulosConectadoResponse
     {

@@ -1,4 +1,9 @@
-﻿namespace Application..CQRS.Peticiones.Command
+﻿using Application.Interfaces.Repositories.Generic.Auditable;
+using AutoMapper;
+using MediatR;
+using Shared.Constants;
+using Shared.Wrappers;
+namespace Application.CQRS.Peticiones.Command
 {
     public class AddEditPeticionesCommand : IRequest<IResult>
     {

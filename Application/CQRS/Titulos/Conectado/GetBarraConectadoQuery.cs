@@ -1,4 +1,11 @@
-﻿namespace Application..CQRS.Titulos.Conectado
+﻿using Application.Interfaces.Repositories.Generic.NonAuditable;
+using Application.Responses.Titulos.Categoria;
+using Application.Responses.Titulos.Conectado;
+using AutoMapper;
+using MediatR;
+using Shared.Wrappers;
+
+namespace Application.CQRS.Titulos.Conectado
 {
     public record GetBarraConectadoQuery : IRequest<IResult<BarraHerramientasConectadoResponse>>;
 

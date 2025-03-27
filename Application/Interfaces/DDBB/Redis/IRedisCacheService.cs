@@ -1,4 +1,4 @@
-﻿namespace Application..Interfaces.DDBB.Redis
+﻿namespace Application.Interfaces.DDBB.Redis
 {
     public interface IRedisCacheService
     {

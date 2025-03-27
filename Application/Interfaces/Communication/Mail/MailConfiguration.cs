@@ -1,4 +1,4 @@
-﻿namespace Application..Interfaces.Communication.Mail
+﻿namespace Application.Interfaces.Communication.Mail
 {
     public class MailConfiguration
     {

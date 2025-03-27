@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Communication.Chat
+﻿namespace Application.CQRS.Communication.Chat
 {
     /// <summary>
     /// Clase para traer los chats con los que el usuario actual tiene guardados

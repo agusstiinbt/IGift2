@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Application..CQRS.Files.ProfilePicture
+namespace Application.CQRS.Files.ProfilePicture
 {
     /// <summary>
     /// Clase que se encarga de guardar información al respecto sobre cómo subir una foto de perfil

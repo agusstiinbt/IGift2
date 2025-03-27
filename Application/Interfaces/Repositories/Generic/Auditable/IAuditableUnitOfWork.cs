@@ -1,4 +1,7 @@
-﻿namespace Application..Interfaces.Repositories.Generic.Auditable
+﻿using Domain.Contracts;
+using Shared.Wrappers;
+
+namespace Application.Interfaces.Repositories.Generic.Auditable
 {
     public interface IAuditableUnitOfWork<TId> : IDisposable
     {

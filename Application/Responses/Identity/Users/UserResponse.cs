@@ -1,4 +1,4 @@
-﻿namespace Application..Responses.Identity.Users
+﻿namespace Application.Responses.Identity.Users
 {
     public class UserResponse
     {

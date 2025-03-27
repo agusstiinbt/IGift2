@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Communication.Chat
+﻿namespace Application.CQRS.Communication.Chat
 {
     /// <summary>
     /// Esta clase va a ser responsable de mostrar los mensajes en el chat

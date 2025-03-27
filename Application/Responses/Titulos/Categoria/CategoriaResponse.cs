@@ -1,4 +1,4 @@
-﻿namespace Application..Responses.Titulos.Categoria
+﻿namespace Application.Responses.Titulos.Categoria
 {
     public class CategoriaResponse
     {

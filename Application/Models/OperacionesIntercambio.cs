@@ -1,4 +1,6 @@
-﻿namespace Application..Models
+﻿using Domain.Contracts;
+
+namespace Application.Models
 {
     /// <summary>
     /// Guardar en Oracle.

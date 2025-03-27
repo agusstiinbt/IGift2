@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Identity.Email
+﻿namespace Application.CQRS.Identity.Email
 {
     public class MailRequest
     {

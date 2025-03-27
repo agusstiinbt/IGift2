@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
+using AutoMapper;
 
-namespace Application..Interfaces.Repositories
+namespace Application.Interfaces.Repositories
 {
     public interface INonAuditableRepository<T, in TId> where T : class, IEntity<TId>
     {
@@ -26,5 +27,6 @@ namespace Application..Interfaces.Repositories
         Task<IQueryable<TDto>> GetAllMapAsyncQuery<TDto>(IMapper mapper) where TDto : class;
 
         Task<Task> DeleteAsync(T entity);
+        Task GetAllMapAsyncQuery<T1>(IMapper mapper);
     }
 }

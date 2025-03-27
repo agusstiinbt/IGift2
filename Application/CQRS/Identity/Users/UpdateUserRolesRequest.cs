@@ -1,4 +1,6 @@
-﻿namespace Application..CQRS.Identity.Users
+﻿using Application.Responses.Users;
+
+namespace Application.CQRS.Identity.Users
 {
     public class UpdateUserRolesRequest
     {

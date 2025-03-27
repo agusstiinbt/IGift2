@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Communication.Chat
+﻿namespace Application.CQRS.Communication.Chat
 {
     /// <summary>
     /// Clase usada para enviar un mensaje a un chat con un usuario paticular

@@ -1,4 +1,6 @@
-﻿namespace Application..Filtros.Pedidos
+﻿using Domain.Entities;
+
+namespace Application.Filtros.Pedidos
 {
     public class PeticionesFilter : Specification<Peticiones>
     {

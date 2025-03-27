@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Files.ProfilePicture
+﻿namespace Application.CQRS.Files.ProfilePicture
 {
     /// <summary>
     /// Esta clase se usa para traer la foto de perfil del Id correspondiente

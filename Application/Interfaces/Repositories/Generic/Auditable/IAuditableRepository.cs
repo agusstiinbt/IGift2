@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
-
-namespace Application..Interfaces.Repositories.Generic.Auditable
+using AutoMapper;
+using Domain.Contracts;
+namespace Application.Interfaces.Repositories.Generic.Auditable
 {
     public interface IAuditableRepository<T, in TId> where T : class, IEntity<TId>
     {

@@ -1,6 +1,14 @@
 ﻿using System.Linq.Expressions;
+using Application.Extensions;
+using Application.Filtros.Locales;
+using Application.Interfaces.Repositories.Generic.Auditable;
+using Application.Responses.LocalAdherido;
+using AutoMapper;
+using Domain.Entities;
+using MediatR;
+using Shared.Wrappers;
 
-namespace Application..CQRS.LocalesAdheridos.Query
+namespace Application.CQRS.LocalesAdheridos.Query
 {
     public class GetAllLocalAdheridoQuery : IRequest<IResult<PaginatedResult<LocalAdheridoResponse>>>
     {

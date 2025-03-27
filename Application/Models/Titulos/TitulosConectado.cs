@@ -1,4 +1,6 @@
-﻿namespace Application..Models.Titulos
+﻿using Domain.Contracts;
+
+namespace Application.Models.Titulos
 {
     public class TitulosConectado : Entity<int>
     {

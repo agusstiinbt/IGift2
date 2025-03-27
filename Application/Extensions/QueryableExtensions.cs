@@ -1,4 +1,9 @@
-﻿namespace Application..Extensions
+﻿using Application.Filtros;
+using Domain.Contracts;
+using Microsoft.EntityFrameworkCore;
+using Shared.Wrappers;
+
+namespace Application.Extensions
 {
     public static class QueryableExtensions
     {

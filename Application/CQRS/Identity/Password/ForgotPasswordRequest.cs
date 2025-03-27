@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Application..CQRS.Identity.Password
+namespace Application.CQRS.Identity.Password
 {
     public class ForgotPasswordRequest
     {

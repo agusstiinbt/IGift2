@@ -1,6 +1,8 @@
 ﻿using System.Linq.Expressions;
+using Application.Extensions;
+using Domain.Contracts;
 
-namespace Application..Filtros
+namespace Application.Filtros
 {
     public class Specification<T> : ISpecification<T> where T : class, IEntity
     {

@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Files
+﻿namespace Application.CQRS.Files
 {
     public class UploadResult
     {

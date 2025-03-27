@@ -1,6 +1,13 @@
 ﻿using System.Linq.Expressions;
+using Application.Extensions;
+using Application.Filtros.Pedidos;
+using Application.Interfaces.Repositories.Generic.Auditable;
+using Application.Responses.Peticiones;
+using AutoMapper;
+using MediatR;
+using Shared.Wrappers;
 
-namespace Application..CQRS.Peticiones.Query
+namespace Application.CQRS.Peticiones.Query
 {
     /// <summary>
     /// Con esta clase podemos buscar peticiones segun las propiedades que le carguemos. Si vamos a hacer una busqueda con un resultado "Similar" entonces utilizar SearchString. Si utilizamos una busqueda de tipo exacta, utilizamos Descripcion y/o Categoria

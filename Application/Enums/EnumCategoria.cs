@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Application..Enums
+namespace Application.Enums
 {
     public enum EnumCategoria
     {

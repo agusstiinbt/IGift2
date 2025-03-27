@@ -1,4 +1,8 @@
-﻿namespace Application..Interfaces.Communication.Chat
+﻿using Application.CQRS.Communication.Chat;
+using Application.Models.Chat;
+using Shared.Wrappers;
+
+namespace Application.Interfaces.Communication.Chat
 {
     public interface IChatService
     {

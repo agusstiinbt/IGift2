@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Communication.Chat
+﻿namespace Application.CQRS.Communication.Chat
 {
     /// <summary>
     /// Esta clase se usa para traernos el chat que queremos visualizar 

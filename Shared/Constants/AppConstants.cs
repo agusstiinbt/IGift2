@@ -4,7 +4,7 @@
     //Hacer CTRL+a,Ctrl+M+M
     public static class AppConstants
     {
-        internal static class Local
+        public static class Local
         {
             public static readonly string BackgroundColor = "#181A20";
 
@@ -26,13 +26,13 @@
             #endregion
         }
 
-        internal static class Role
+        public static class Role
         {
             public static string AdministratorRole = "Administrator";
             public static string BasicRole = "Basic";
         }
 
-        internal static class Routes
+        public static class Routes
         {
             public static string Home = "/";
             public static string Register = "/Register";
@@ -43,7 +43,7 @@
             public static string UserProfile = "/UserProfile";
         }
 
-        internal static class Server
+        public static class Server
         {
             /// <summary>
             /// ESTO SOLO DEBE USARSE EN EL SEEDER
@@ -67,7 +67,7 @@
             public const string ApiGateway = "ApiGateway";
         }
 
-        internal static class SignalR
+        public static class SignalR
         {
             public const string HubUrl = "/signalRHub";
 

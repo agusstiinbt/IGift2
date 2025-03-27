@@ -1,4 +1,6 @@
-﻿namespace Application..Responses.Notification
+﻿using Application.Enums;
+
+namespace Application.Responses.Notification
 {
     public class NotificationResponse
     {

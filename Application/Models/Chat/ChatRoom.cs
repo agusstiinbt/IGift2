@@ -1,4 +1,4 @@
-﻿namespace Application..Models.Chat
+﻿namespace Application.Models.Chat
 {
     public class ChatRoom
     {

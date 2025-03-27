@@ -1,4 +1,11 @@
-﻿namespace Application..CQRS.Notifications.Query
+﻿using Application.Enums;
+using Application.Interfaces.Repositories.Generic.NonAuditable;
+using Application.Models;
+using Application.Responses.Notification;
+using AutoMapper;
+using MediatR;
+using Shared.Wrappers;
+namespace Application.CQRS.Notifications.Query
 {
     public class GetAllNotificationQuery : IRequest<IResult<IEnumerable<NotificationResponse>>>
     {

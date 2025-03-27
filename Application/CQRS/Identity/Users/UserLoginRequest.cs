@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Application..CQRS.Identity.Users
+namespace Application.CQRS.Identity.Users
 {
     public class UserLoginRequest
     {

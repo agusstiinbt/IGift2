@@ -1,5 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
-namespace Application..CQRS.LocalesAdheridos.Command
+using Application.CQRS.Files;
+using Application.Interfaces.Files;
+using Application.Interfaces.Repositories.Generic.Auditable;
+using AutoMapper;
+using Domain.Entities;
+using MediatR;
+using Shared.Constants;
+using Shared.Wrappers;
+namespace Application.CQRS.LocalesAdheridos.Command
 {
     public class AddEditLocalAdheridoCommand : IRequest<IResult>
     {

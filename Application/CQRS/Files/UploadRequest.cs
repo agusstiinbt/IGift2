@@ -1,6 +1,7 @@
 ﻿using System.Text.Json.Serialization;
+using Application.Enums;
 
-namespace Application..CQRS.Files
+namespace Application.CQRS.Files
 {
     /// <summary>
     /// Esta clase se usa de manera 'genérica' para poder subir todo tipo de archivos, desde fotos de perfil hasta archivos de excel

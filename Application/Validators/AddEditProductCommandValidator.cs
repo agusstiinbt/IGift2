@@ -1,6 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Application.CQRS.Files;
+using FluentValidation;
+using MediatR;
+using Shared.Wrappers;
 
-namespace Application..Validators
+namespace Application.Validators
 {
     public class AddEditProductCommandValidator : AbstractValidator<AddEditProductCommand>
     {

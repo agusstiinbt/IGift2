@@ -1,4 +1,4 @@
-﻿namespace Application..Interfaces.DDBB.Sql
+﻿namespace Application.Interfaces.DDBB.Sql
 {
     public interface IDatabaseSeeder
     {

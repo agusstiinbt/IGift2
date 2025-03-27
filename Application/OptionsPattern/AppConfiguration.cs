@@ -1,4 +1,4 @@
-﻿namespace Application..OptionsPattern
+﻿namespace Application.OptionsPattern
 {
     public class AppConfiguration
     {

@@ -1,4 +1,4 @@
-﻿namespace Application..Interfaces.Repositories.NonGeneric.Peticiones
+﻿namespace Application.Interfaces.Repositories.NonGeneric.Peticiones
 {
     public interface IPeticionesRepository
     {

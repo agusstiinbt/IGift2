@@ -1,4 +1,4 @@
-﻿namespace Application..Responses.LocalAdherido
+﻿namespace Application.Responses.LocalAdherido
 {
     public class LocalAdheridoResponse
     {

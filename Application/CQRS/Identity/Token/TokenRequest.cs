@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Identity.Token
+﻿namespace Application.CQRS.Identity.Token
 {
     public class TokenRequest
     {

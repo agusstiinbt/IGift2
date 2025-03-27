@@ -1,4 +1,6 @@
-﻿namespace Application..Responses.Identity.Users
+﻿using Domain.Entities;
+
+namespace Application.Responses.Identity.Users
 {
     public class TokenResponse
     {

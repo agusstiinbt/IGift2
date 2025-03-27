@@ -1,4 +1,4 @@
-﻿namespace Application..CQRS.Identity.Users
+﻿namespace Application.CQRS.Identity.Users
 {
     public class UserByIdRequest
     {

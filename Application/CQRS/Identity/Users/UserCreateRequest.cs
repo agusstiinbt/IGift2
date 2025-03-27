@@ -1,4 +1,6 @@
-﻿namespace Application..CQRS.Identity.Users
+﻿using FluentValidation;
+
+namespace Application.CQRS.Identity.Users
 {
     public class UserCreateRequest
     {

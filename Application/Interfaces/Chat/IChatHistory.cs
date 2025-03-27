@@ -1,4 +1,4 @@
-﻿namespace Application..Interfaces.Chat
+﻿namespace Application.Interfaces.Chat
 {
     public interface IChatHistory<TUser> where TUser : IChatUser
     {

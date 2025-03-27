@@ -1,4 +1,4 @@
-﻿namespace Application..Responses.Users
+﻿namespace Application.Responses.Users
 {
     /// <summary>
     /// Esta clase contiene una lista de UserRoleModel

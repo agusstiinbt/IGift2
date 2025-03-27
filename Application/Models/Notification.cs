@@ -1,4 +1,7 @@
-﻿namespace Application..Models
+﻿using Application.Enums;
+using Domain.Contracts;
+
+namespace Application.Models
 {
     public class Notification : Entity<int>
     {

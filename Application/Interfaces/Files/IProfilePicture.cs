@@ -1,4 +1,8 @@
-﻿namespace Application..Interfaces.Files
+﻿using Application.CQRS.Files.ProfilePicture;
+using Application.Responses.Files;
+using Shared.Wrappers;
+
+namespace Application.Interfaces.Files
 {
     public interface IProfilePicture
     {

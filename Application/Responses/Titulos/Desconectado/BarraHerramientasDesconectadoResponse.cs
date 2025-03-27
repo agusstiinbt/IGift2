@@ -1,4 +1,6 @@
-﻿namespace Application..Responses.Titulos.Desconectado
+﻿using Application.Responses.Titulos.Categoria;
+
+namespace Application.Responses.Titulos.Desconectado
 {
     public class BarraHerramientasDesconectadoResponse
     {

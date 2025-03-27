@@ -1,4 +1,6 @@
-﻿namespace Application..Models.Chat
+﻿using Application.Interfaces.Chat;
+
+namespace Application.Models.Chat
 {
     public class ChatHistory<TUser> : IChatHistory<TUser> where TUser : IChatUser
     {

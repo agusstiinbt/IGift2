@@ -1,4 +1,6 @@
-﻿namespace Application..Responses.Titulos.Conectado
+﻿using Application.Responses.Titulos.Categoria;
+
+namespace Application.Responses.Titulos.Conectado
 {
     public class BarraHerramientasConectadoResponse
     {

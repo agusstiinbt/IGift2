@@ -1,4 +1,4 @@
-﻿namespace Application..Interfaces.Dates
+﻿namespace Application.Interfaces.Dates
 {
     public interface IDateTimeService
     {

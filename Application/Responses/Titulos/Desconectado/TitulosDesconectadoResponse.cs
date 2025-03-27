@@ -1,4 +1,4 @@
-﻿namespace Application..Responses.Titulos.Desconectado
+﻿namespace Application.Responses.Titulos.Desconectado
 {
     public class TitulosDesconectadoResponse
     {

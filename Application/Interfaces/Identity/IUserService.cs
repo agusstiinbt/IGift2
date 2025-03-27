@@ -1,4 +1,10 @@
-﻿namespace Application..Interfaces.Identity
+﻿using Application.CQRS.Identity.Password;
+using Application.CQRS.Identity.Users;
+using Application.Responses.Identity.Users;
+using Application.Responses.Users;
+using Shared.Wrappers;
+
+namespace Application.Interfaces.Identity
 {
     public interface IUserService
     {

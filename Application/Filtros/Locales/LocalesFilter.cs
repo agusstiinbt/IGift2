@@ -1,4 +1,6 @@
-﻿namespace Application..Filtros.Locales
+﻿using Domain.Entities;
+
+namespace Application.Filtros.Locales
 {
     public class LocalesFilter : Specification<LocalAdherido>
     {

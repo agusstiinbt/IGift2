@@ -1,4 +1,4 @@
-﻿namespace Application..Responses.Peticiones
+﻿namespace Application.Responses.Peticiones
 {
     public class PeticionesResponse
     {

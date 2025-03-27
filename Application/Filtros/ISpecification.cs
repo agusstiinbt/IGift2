@@ -1,6 +1,7 @@
 ﻿using System.Linq.Expressions;
+using Domain.Contracts;
 
-namespace Application..Filtros
+namespace Application.Filtros
 {
     //TODO estudiar
     public interface ISpecification<T> where T : class, IEntity

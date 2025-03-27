@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Application..Enums
+namespace Application.Enums
 {
     /// <summary>
     /// Este Enum se utiliza para saber en qué directorio guardaremos un tipo de archivo, habiendo tipos como Imagenes, Documentos y sus sub-variedades
