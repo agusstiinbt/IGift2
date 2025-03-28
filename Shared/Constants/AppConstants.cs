@@ -28,8 +28,8 @@
 
         public static class Role
         {
-            public static string AdministratorRole = "Administrator";
-            public static string BasicRole = "Basic";
+            public const string AdministratorRole = "Administrator";
+            public const string BasicRole = "Basic";
         }
 
         public static class Routes

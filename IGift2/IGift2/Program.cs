@@ -1,4 +1,6 @@
 using IGift2.Components;
+using Microsoft.AspNetCore.Hosting.Builder;
+using Microsoft.OpenApi.Models;
 using Shared;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,11 +21,24 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 
 
+#region Swagger
+
+builder.Services.AddSwaggerGen();
+#endregion
+
+
 var app = builder.Build();
+
+
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    //swagger
+    app.UseSwagger();
+    app.UseSwaggerUI();
     app.UseWebAssemblyDebugging();
 }
 else

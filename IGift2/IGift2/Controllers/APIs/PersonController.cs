@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Shared;
 
-namespace IGift2.Controllers
+namespace IGift2.Controllers.APIs
 {
     [Route("api/[controller]")]
     [ApiController]
