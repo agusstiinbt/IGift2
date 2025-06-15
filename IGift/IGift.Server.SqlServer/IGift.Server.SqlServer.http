@@ -1,0 +1,6 @@
+@IGift.Server.SqlServer_HostAddress = http://localhost:5114
+
+GET {{IGift.Server.SqlServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
