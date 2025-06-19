@@ -4,7 +4,6 @@ using IGift.Application.Interfaces.Repositories.Generic.NonAuditable;
 using IGift.Application.Responses.Notification;
 using IGift.Shared.Wrapper;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace IGift.Application.CQRS.Notifications.Query
 {
@@ -31,18 +30,20 @@ namespace IGift.Application.CQRS.Notifications.Query
 
         public async Task<IResult<IEnumerable<NotificationResponse>>> Handle(GetAllNotificationQuery request, CancellationToken cancellationToken)
         {
-            var query = await _unitOfWork.Repository<Notification>().GetAllMapAsyncQuery<NotificationResponse>(_mapper);
+            //var query = await _unitOfWork.Repository<Notification>().GetAllMapAsyncQuery<NotificationResponse>(_mapper);
 
-            if (!string.IsNullOrEmpty(request.IdUser))//Traemos solamente aquellas notificaciones que corresponda al IdUser pasado
-                query = query.Where(x => x.IdUser == request.IdUser);
+            //if (!string.IsNullOrEmpty(request.IdUser))//Traemos solamente aquellas notificaciones que corresponda al IdUser pasado
+            //    query = query.Where(x => x.IdUser == request.IdUser);
 
-            if (request.FechaHasta != null)
-                query = query.Where(x => x.DateTime > request.FechaHasta);
+            //if (request.FechaHasta != null)
+            //    query = query.Where(x => x.DateTime > request.FechaHasta);
 
-            if (request.TypeNotification != null)
-                query = query.Where(x => x.Type == request.TypeNotification);
+            //if (request.TypeNotification != null)
+            //    query = query.Where(x => x.Type == request.TypeNotification);
 
-            return await Result<IEnumerable<NotificationResponse>>.SuccessAsync(await query.ToListAsync());
+            //return await Result<IEnumerable<NotificationResponse>>.SuccessAsync(await query.ToListAsync());
+
+            return null;
         }
     }
 }

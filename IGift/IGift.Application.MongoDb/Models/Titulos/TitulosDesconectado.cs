@@ -1,6 +1,4 @@
-﻿using IGift.Domain.Contracts;
-
-namespace IGift.Application.MongoDb.Models.Titulos
+﻿namespace IGift.Application.MongoDb.Models.Titulos
 {
     public class TitulosDesconectado : Entity<int>
     {

@@ -1,5 +1,6 @@
-﻿using IGift.Infrastructure.MongoDb.Data;
-using Microsoft.Extensions.DependencyInjection;
+﻿
+
+using Microsoft.Extensions.Options;
 
 namespace IGift.Infrastructure.MongoDb.Services.cs.Chat
 {
@@ -242,4 +243,21 @@ namespace IGift.Infrastructure.MongoDb.Services.cs.Chat
             return await Result.SuccessAsync();
         }
     }
+
+    public class ChatService2
+    {
+        private readonly IMongoCollection<ChatHistory> _chats;
+
+        public ChatService2(IOptions<IGiftDataBaseSettings> databaseSettings)
+        {
+            var mongoClient = new MongoClient(databaseSettings.Value.ConnectionString);
+
+            var mongoDatabase = mongoClient.GetDatabase(databaseSettings.Value.DatabaseName);
+
+            _chats = mongoDatabase.GetCollection<ChatHistory>(databaseSettings.Value.Collections.ChatHistories);
+
+        }
+
+    }
+
 }

@@ -24,15 +24,16 @@ namespace IGift.Application.CQRS.Notifications.Command
 
         public async Task<IResult> Handle(SaveNotificationCommand request, CancellationToken cancellationToken)
         {
-            try
-            {
-                await _unitOfWork.Repository<Notification>().AddAsync(new Notification() { DateTime = request.DateTime, IdUser = request.IdUser, Message = request.Message, Type = request.TypeNotification });
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error al guardar la notificacion. SaveNotificationCommandHandler. Mensaje de error " + e.Message);
-            }
-            return await Result.SuccessAsync("Notificacion guardada con exito");
+            //try
+            //{
+            //    await _unitOfWork.Repository<Notification>().AddAsync(new Notification() { DateTime = request.DateTime, IdUser = request.IdUser, Message = request.Message, Type = request.TypeNotification });
+            //}
+            //catch (Exception e)
+            //{
+            //    throw new Exception("Error al guardar la notificacion. SaveNotificationCommandHandler. Mensaje de error " + e.Message);
+            //}
+            //return await Result.SuccessAsync("Notificacion guardada con exito");
+            return null;
         }
     }
 }
