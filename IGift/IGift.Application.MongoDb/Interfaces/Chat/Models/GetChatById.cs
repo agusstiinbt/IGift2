@@ -1,4 +1,4 @@
-﻿namespace IGift.Application.CQRS.Communication.Chat
+﻿namespace IGift.Application.MongoDb.Interfaces.Chat.Models
 {
     /// <summary>
     /// Esta clase se usa para traernos el chat que queremos visualizar 
@@ -12,6 +12,5 @@
         public DateTime LastMessageDate { get; set; }
 
         public required bool IsFirstTime { get; set; }
-
     }
 }

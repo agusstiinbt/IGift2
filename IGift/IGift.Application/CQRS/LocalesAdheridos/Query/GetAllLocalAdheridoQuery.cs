@@ -4,7 +4,7 @@ using IGift.Application.Extensions;
 using IGift.Application.Filtros.Locales;
 using IGift.Application.Interfaces.Repositories.Generic.Auditable;
 using IGift.Application.Responses.LocalAdherido;
-using IGift.Domain.Entities.SQLServer;
+using IGift.Domain.Entities;
 using IGift.Shared.Wrapper;
 using MediatR;
 

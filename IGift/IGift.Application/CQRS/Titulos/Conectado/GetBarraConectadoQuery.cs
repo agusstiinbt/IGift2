@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using IGift.Application.Interfaces.Repositories.Generic.NonAuditable;
-using IGift.Application.Models.MongoDBModels.Titulos;
 using IGift.Application.Models.SQL.MySQL;
 using IGift.Application.Responses.Titulos.Categoria;
 using IGift.Application.Responses.Titulos.Conectado;

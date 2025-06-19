@@ -1,6 +1,6 @@
 ﻿using IGift.Domain.Contracts;
 
-namespace IGift.Domain.Entities.SQLServer
+namespace IGift.Domain.Entities
 {
     public class Contract : AuditableEntity<int>
     {

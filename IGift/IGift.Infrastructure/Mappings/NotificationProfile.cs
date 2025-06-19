@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using IGift.Application.Models.MongoDBModels;
 using IGift.Application.Responses.Notification;
 
 namespace IGift.Infrastructure.Mappings

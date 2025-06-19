@@ -1,8 +1,6 @@
-﻿using IGift.Application.Models.MongoDBModels;
-using IGift.Application.Models.MongoDBModels.Chat;
-using IGift.Application.Models.MongoDBModels.Titulos;
-using IGift.Application.Models.SQL.MySQL;
+﻿using IGift.Application.Models.SQL.MySQL;
 using IGift.Application.Models.SQL.PostgreSQL;
+using IGift.Domain.Entities;
 using IGift.Domain.Entities.SQLServer;
 using IGift.Infrastructure.Models;
 using Microsoft.AspNetCore.Identity;
@@ -17,22 +15,17 @@ namespace IGift.Infrastructure.Data
         #region DBSets
 
         public DbSet<Category> Categorias { get; set; }
-        public DbSet<ChatHistory<IGiftUser>> ChatHistories { get; set; }
         public DbSet<Contract> Contracts { get; set; }
 
         public DbSet<GiftCard> GiftCards { get; set; }
 
         public DbSet<LocalAdherido> LocalesAdheridos { get; set; }
 
-        public DbSet<Notification> Notification { get; set; }
 
         public DbSet<ExchangeOperations> OperacionesIntercambio { get; set; }
 
         public DbSet<Petitions> Pedidos { get; set; }
         public DbSet<ProfilePicture> ProfilePicture { get; set; }
-
-        public DbSet<TitulosConectado> TitulosConectados { get; set; }
-        public DbSet<TitulosDesconectado> TitulosDesconectados { get; set; }
 
 
         #endregion
@@ -74,11 +67,6 @@ namespace IGift.Infrastructure.Data
 
             //No confundir la construcción de este código con el anterior entre ProfilePicture y IGiftUser. Son distintos por la relacion que hay entre ellos:
 
-            builder.Entity<Notification>()
-           .HasOne<IGiftUser>()
-           .WithMany(u => u.Notifications)
-           .HasForeignKey(n => n.IdUser);
-
             builder.Entity<Petitions>()
            .HasOne<IGiftUser>()
            .WithMany(u => u.Pedidos)
@@ -105,27 +93,6 @@ namespace IGift.Infrastructure.Data
             #endregion
 
             #region Contracts
-
-            builder.Entity<ChatHistory<IGiftUser>>(entity =>
-            {
-                entity.HasKey(ch => ch.Id);
-
-                entity.HasOne(ch => ch.FromUser)
-                    .WithMany()
-                    .HasForeignKey(ch => ch.FromUserId)
-                    .OnDelete(DeleteBehavior.NoAction);
-
-                entity.HasOne(ch => ch.ToUser)
-                    .WithMany()
-                    .HasForeignKey(ch => ch.ToUserId)
-                    .OnDelete(DeleteBehavior.NoAction);
-            });
-            //  Explicación de CHAT History
-            //Se define la clave primaria: entity.HasKey(ch => ch.Id);
-            //            Se configuran las relaciones:
-            //FromUserId apunta a IGiftUser, sin cascada(OnDelete(DeleteBehavior.NoAction)).
-            //ToUserId apunta a IGiftUser, también sin cascada.
-            //Esto previene que la eliminación de un usuario borre los mensajes de chat en cascada, evitando ciclos.
 
             builder.Entity<Contract>()
                .HasOne<IGiftUser>()

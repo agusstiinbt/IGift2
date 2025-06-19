@@ -1,4 +1,4 @@
-﻿namespace IGift.Application.CQRS.Communication.Chat
+﻿namespace IGift.Application.MongoDb.Interfaces.Chat.Models
 {
     /// <summary>
     /// Clase usada para enviar un mensaje a un chat con un usuario paticular

@@ -1,4 +1,4 @@
-﻿namespace IGift.Application.CQRS.Communication.Chat
+﻿namespace IGift.Application.MongoDb.Interfaces.Chat.Models
 {
     /// <summary>
     /// Esta clase va a ser responsable de mostrar los mensajes en el chat

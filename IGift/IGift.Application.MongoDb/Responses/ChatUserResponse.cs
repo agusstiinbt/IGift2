@@ -1,4 +1,4 @@
-﻿namespace IGift.Application.Models.MongoDBModels.Chat
+﻿namespace IGift.Application.MongoDb.Responses
 {
     /// <summary>
     /// Esta clase se usa para mostrar en el costado del chat room los chats que tenemos con otros usuarios

@@ -1,0 +1,6 @@
+@IGift.Server.MongoDb_HostAddress = http://localhost:5130
+
+GET {{IGift.Server.MongoDb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

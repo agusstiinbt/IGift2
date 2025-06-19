@@ -1,8 +1,4 @@
-﻿using IGift.Application.CQRS.Communication.Chat;
-using IGift.Application.Models.MongoDBModels.Chat;
-using IGift.Shared.Wrapper;
-
-namespace IGift.Application.Interfaces.Communication.Chat
+﻿namespace IGift.Application.MongoDb.Interfaces.Chat
 {
     public interface IChatService
     {
@@ -25,6 +21,5 @@ namespace IGift.Application.Interfaces.Communication.Chat
         /// </summary>
         /// <returns></returns>
         Task<IResult<IEnumerable<ChatUserResponse>>> LoadChatUsers(string CurrentUserId);
-
     }
 }

@@ -1,4 +1,4 @@
-﻿using IGift.Domain.Entities.SQLServer;
+﻿using IGift.Domain.Entities;
 
 namespace IGift.Application.Filtros.Locales
 {
