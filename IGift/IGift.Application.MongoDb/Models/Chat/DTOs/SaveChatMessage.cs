@@ -1,4 +1,4 @@
-﻿namespace IGift.Application.MongoDb.Interfaces.Chat.Models
+﻿namespace IGift.Application.MongoDb.Models.Chat.DTOs
 {
     /// <summary>
     /// Clase usada para enviar un mensaje a un chat con un usuario paticular

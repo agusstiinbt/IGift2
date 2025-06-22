@@ -12,6 +12,6 @@
     {
         public string ChatHistories { get; set; } = null!;
         public string Notifications { get; set; } = null!;
-        public string UserPreferences { get; set; } = null!;
+        public string Titles { get; set; } = null!;
     }
 }

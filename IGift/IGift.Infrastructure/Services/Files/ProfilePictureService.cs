@@ -109,39 +109,39 @@ namespace IGift.Infrastructure.Services.Files
         public async Task<IResult> SaveProfilePictureAsync(ProfilePictureUpload request)
         {
 
-            if (request.UploadRequest.UploadType != UploadType.ProfilePicture)
-                return await Result<IResult>.FailAsync();
+            //if (request.UploadRequest.UploadType != UploadType.ProfilePicture)
+            //    return await Result<IResult>.FailAsync();
 
-            //Las fotos de perfil siempre las pisamos, es decir eliminamos la anterior
-            var pathResponse = await _uploadService.UploadAsync(request.UploadRequest, true);
+            ////Las fotos de perfil siempre las pisamos, es decir eliminamos la anterior
+            //var pathResponse = await _uploadService.UploadAsync(request.UploadRequest, true);
 
-            if (!string.IsNullOrEmpty(pathResponse))
-            {
-                var newProfilePicture = new ProfilePicture { FileType = "image/png", IdUser = request.IdUser, UploadDate = DateTime.Now, Url = pathResponse };
+            //if (!string.IsNullOrEmpty(pathResponse))
+            //{
+            //    var newProfilePicture = new ProfilePicture { FileType = "image/png", IdUser = request.IdUser, UploadDate = DateTime.Now, Url = pathResponse };
 
-                var exists = await _dbContext.ProfilePicture.AnyAsync(x => x.IdUser == request.IdUser);
-                try
-                {
-                    if (!exists)
-                    {
-                        await _dbContext.ProfilePicture.AddAsync(newProfilePicture);
-                        await _dbContext.SaveChangesAsync();
-                    }
-                }
-                catch (Exception e)
-                {
-                    throw new Exception("Error al subir foto de perfil");
-                }
-                //Si no existe una foto de perfil con el IdUser del 'request' entonces creamos una nueva fila
+            //    var exists = await _dbContext.ProfilePicture.AnyAsync(x => x.IdUser == request.IdUser);
+            //    try
+            //    {
+            //        if (!exists)
+            //        {
+            //            await _dbContext.ProfilePicture.AddAsync(newProfilePicture);
+            //            await _dbContext.SaveChangesAsync();
+            //        }
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        throw new Exception("Error al subir foto de perfil");
+            //    }
+            //    //Si no existe una foto de perfil con el IdUser del 'request' entonces creamos una nueva fila
 
-                var user = await _dbContext.Users.Where(x => x.Id == request.IdUser).FirstAsync();
+            //    var user = await _dbContext.Users.Where(x => x.Id == request.IdUser).FirstAsync();
 
-                user.ProfilePictureDataUrl = pathResponse;
+            //    user.ProfilePictureDataUrl = pathResponse;
 
-                await _dbContext.SaveChangesAsync();
+            //    await _dbContext.SaveChangesAsync();
 
-                return await Result.SuccessAsync();
-            }
+            //    return await Result.SuccessAsync();
+            //}
 
             return await Result.FailAsync();
         }

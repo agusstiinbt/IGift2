@@ -27,109 +27,110 @@ namespace IGift.Infrastructure.Services.DDBB.Sql
         }
         private void AddAdministrator()
         {
-            Task.Run(async () =>
-              {
-                  var admin = AppConstants.Role.AdministratorRole;
+            //Task.Run(async () =>
+            //  {
+            //      var admin = AppConstants.Role.AdministratorRole;
 
-                  var adminRole = new IGiftRole
-                  {
-                      Name = AppConstants.Role.AdministratorRole,
-                      Description = "Rol de administrador con todos los permisos",
-                      CreatedBy = admin,
-                      CreatedOn = DateTime.Today,
-                      LastModifiedBy = admin,
-                      LastModifiedOn = DateTime.Today,
-                  };
+            //      var adminRole = new IGiftRole
+            //      {
+            //          Name = AppConstants.Role.AdministratorRole,
+            //          Description = "Rol de administrador con todos los permisos",
+            //          CreatedBy = admin,
+            //          CreatedOn = DateTime.Today,
+            //          LastModifiedBy = admin,
+            //          LastModifiedOn = DateTime.Today,
+            //      };
 
-                  var adminRoleInDb = await _roleManager.FindByNameAsync(admin);
-                  if (adminRoleInDb == null)
-                  {
-                      await _roleManager.CreateAsync(adminRole);
-                      adminRoleInDb = await _roleManager.FindByNameAsync(admin);
-                  }
+            //      var adminRoleInDb = await _roleManager.FindByNameAsync(admin);
+            //      if (adminRoleInDb == null)
+            //      {
+            //          await _roleManager.CreateAsync(adminRole);
+            //          adminRoleInDb = await _roleManager.FindByNameAsync(admin);
+            //      }
 
-                  var superUser = new IGiftUser
-                  {
-                      FirstName = "Agustin",
-                      LastName = "Esposito",
-                      Email = AppConstants.Server.AdminEmail,
-                      UserName = "agusstiinbt",
-                      EmailConfirmed = true,
-                      PhoneNumberConfirmed = true,
-                      CreatedOn = DateTime.Now
-                  };
+            //      var superUser = new IGiftUser
+            //      {
+            //          FirstName = "Agustin",
+            //          LastName = "Esposito",
+            //          Email = AppConstants.Server.AdminEmail,
+            //          UserName = "agusstiinbt",
+            //          EmailConfirmed = true,
+            //          PhoneNumberConfirmed = true,
+            //          CreatedOn = DateTime.Now
+            //      };
 
-                  var superUserInDb = await _userManager.FindByEmailAsync(superUser.Email);
-                  if (superUserInDb == null)
-                  {
-                      await _userManager.CreateAsync(superUser, AppConstants.Server.DefaultPassword);
-                      var UserCreatedWithId = await _userManager.FindByEmailAsync(superUser.Email);
+            //      var superUserInDb = await _userManager.FindByEmailAsync(superUser.Email);
+            //      if (superUserInDb == null)
+            //      {
+            //          await _userManager.CreateAsync(superUser, AppConstants.Server.DefaultPassword);
+            //          var UserCreatedWithId = await _userManager.FindByEmailAsync(superUser.Email);
 
-                      UserCreatedWithId!.ProfilePictureDataUrl = "Files\\Images\\ProfilePictures" + UserCreatedWithId.Id;
+            //          UserCreatedWithId!.ProfilePictureDataUrl = "Files\\Images\\ProfilePictures" + UserCreatedWithId.Id;
 
-                      await _userManager.AddToRoleAsync(UserCreatedWithId, admin);
+            //          await _userManager.AddToRoleAsync(UserCreatedWithId, admin);
 
-                      await _context.SaveChangesAsync();
+            //          await _context.SaveChangesAsync();
 
-                  }
+            //      }
 
-                  //TODO esto sirve para agregar los claims al usuario superUser. Para implementarlo primero debemos borrar el superUsuario de la base de datos.
-                  //foreach (var permission in Permissions.GetRegisteredPermissions())
-                  //{
-                  //    await _roleManager.AddPermissionClaim(adminRoleInDb, permission);
-                  //} }).GetAwaiter.GetResult();   
+            //      //TODO esto sirve para agregar los claims al usuario superUser. Para implementarlo primero debemos borrar el superUsuario de la base de datos.
+            //      //foreach (var permission in Permissions.GetRegisteredPermissions())
+            //      //{
+            //      //    await _roleManager.AddPermissionClaim(adminRoleInDb, permission);
+            //      //} }).GetAwaiter.GetResult();   
 
-              }).GetAwaiter().GetResult();
+            //  }).GetAwaiter().GetResult();
+             
         }
         private void AddBasicUser()
         {
-            Task.Run(async () =>
-            {
-                var admin = AppConstants.Role.AdministratorRole;
-                var basic = AppConstants.Role.BasicRole;
+            //Task.Run(async () =>
+            //{
+            //    var admin = AppConstants.Role.AdministratorRole;
+            //    var basic = AppConstants.Role.BasicRole;
 
-                var basicRole = new IGiftRole
-                {
-                    Name = AppConstants.Role.BasicRole,
-                    Description = "Rol con permisos básicos",
-                    CreatedBy = admin,
-                    LastModifiedBy = admin,
-                    LastModifiedOn = DateTime.Now,
-                    CreatedOn = DateTime.Now
-                };
+            //    var basicRole = new IGiftRole
+            //    {
+            //        Name = AppConstants.Role.BasicRole,
+            //        Description = "Rol con permisos básicos",
+            //        CreatedBy = admin,
+            //        LastModifiedBy = admin,
+            //        LastModifiedOn = DateTime.Now,
+            //        CreatedOn = DateTime.Now
+            //    };
 
-                var basicRoleInDb = await _roleManager.FindByNameAsync(basic);
+            //    var basicRoleInDb = await _roleManager.FindByNameAsync(basic);
 
-                if (basicRoleInDb == null)
-                {
-                    await _roleManager.CreateAsync(basicRole);
-                }
+            //    if (basicRoleInDb == null)
+            //    {
+            //        await _roleManager.CreateAsync(basicRole);
+            //    }
 
-                var basicUser = new IGiftUser
-                {
-                    FirstName = "Jose",
-                    LastName = "Esposito",
-                    Email = AppConstants.Server.BasicEmail,
-                    UserName = "joseespositoing",
-                    EmailConfirmed = true,
-                    PhoneNumberConfirmed = true,
+            //    var basicUser = new IGiftUser
+            //    {
+            //        FirstName = "Jose",
+            //        LastName = "Esposito",
+            //        Email = AppConstants.Server.BasicEmail,
+            //        UserName = "joseespositoing",
+            //        EmailConfirmed = true,
+            //        PhoneNumberConfirmed = true,
 
-                    CreatedOn = DateTime.Now
-                };
+            //        CreatedOn = DateTime.Now
+            //    };
 
-                var basicUserInDb = await _userManager.FindByEmailAsync(basicUser.Email);
-                if (basicUserInDb == null)
-                {
-                    await _userManager.CreateAsync(basicUser, AppConstants.Server.DefaultPassword);
-                    var UserCreatedWithId = await _userManager.FindByEmailAsync(basicUser.Email);
-                    await _userManager.AddToRoleAsync(UserCreatedWithId, AppConstants.Role.BasicRole);
+            //    var basicUserInDb = await _userManager.FindByEmailAsync(basicUser.Email);
+            //    if (basicUserInDb == null)
+            //    {
+            //        await _userManager.CreateAsync(basicUser, AppConstants.Server.DefaultPassword);
+            //        var UserCreatedWithId = await _userManager.FindByEmailAsync(basicUser.Email);
+            //        await _userManager.AddToRoleAsync(UserCreatedWithId, AppConstants.Role.BasicRole);
 
-                    UserCreatedWithId.ProfilePictureDataUrl = "Files\\Images\\ProfilePictures" + UserCreatedWithId.Id;
+            //        UserCreatedWithId.ProfilePictureDataUrl = "Files\\Images\\ProfilePictures" + UserCreatedWithId.Id;
 
-                    await _context.SaveChangesAsync();
-                }
+            //        await _context.SaveChangesAsync();
+            //    }
 
-            }).GetAwaiter().GetResult();
+            //}).GetAwaiter().GetResult();
         }
     }
 }

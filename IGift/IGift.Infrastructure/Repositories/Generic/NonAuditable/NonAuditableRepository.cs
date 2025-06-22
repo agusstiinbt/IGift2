@@ -1,9 +1,6 @@
 ﻿using System.Linq.Expressions;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
-using IGift.Application.Interfaces.Repositories;
-using IGift.Domain.Contracts;
-using IGift.Infrastructure.Data;
 
 namespace IGift.Infrastructure.Repositories.Generic.NonAuditable
 {
@@ -62,5 +59,4 @@ namespace IGift.Infrastructure.Repositories.Generic.NonAuditable
             return await Task.FromResult(query.ProjectTo<TDto>(mapper.ConfigurationProvider));
         }
     }
-
 }

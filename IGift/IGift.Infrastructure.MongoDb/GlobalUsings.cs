@@ -1,8 +1,8 @@
-﻿global using IGift.Application.MongoDb.Interfaces.Chat;
-global using IGift.Application.MongoDb.Interfaces.Chat.Models;
+﻿global using System.Collections;
+global using IGift.Application.MongoDb.Interfaces.Repository;
+global using IGift.Application.MongoDb.Models.Attributes;
 global using IGift.Application.MongoDb.Models.Chat;
-global using IGift.Application.MongoDb.Responses;
-global using IGift.Infrastructure.MongoDb.Data;
+global using IGift.Domain.Contracts;
 global using IGift.Shared.Wrapper;
-global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Options;
 global using MongoDB.Driver;

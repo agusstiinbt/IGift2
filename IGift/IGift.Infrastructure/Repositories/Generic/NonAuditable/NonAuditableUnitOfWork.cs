@@ -1,12 +1,4 @@
-﻿using System.Collections;
-using IGift.Application.Interfaces.Repositories;
-using IGift.Application.Interfaces.Repositories.Generic.NonAuditable;
-using IGift.Domain.Contracts;
-using IGift.Infrastructure.Data;
-using IGift.Shared.Wrapper;
-using LazyCache;
-
-namespace IGift.Infrastructure.Repositories.Generic.NonAuditable
+﻿namespace IGift.Infrastructure.Repositories.Generic.NonAuditable
 {
     public class NonAuditableUnitOfWork<TId> : INonAuditableUnitOfWork<TId>
     {

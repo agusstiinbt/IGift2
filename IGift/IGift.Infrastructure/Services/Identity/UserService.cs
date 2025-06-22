@@ -73,23 +73,24 @@ namespace IGift.Infrastructure.Services.Identity
 
         public async Task<IResult<UserResponse>> GetByIdAsync(string id)
         {
-            var response = await _userManager.FindByIdAsync(id);
+            //var response = await _userManager.FindByIdAsync(id);
 
-            if (response == null)
-                return await Result<UserResponse>.FailAsync();
-            //TODO mejorar el mapeo u alguna otra cosa para hacer
+            //if (response == null)
+            //    return await Result<UserResponse>.FailAsync();
+            ////TODO mejorar el mapeo u alguna otra cosa para hacer
 
-            var result = new UserResponse()
-            {
-                Id = id,
-                FirstName = response.FirstName,
-                LastName = response.LastName,
-                Email = response.Email,
-                CreatedOn = response.CreatedOn,
-                ProfilePictureDataUrl = response.ProfilePictureDataUrl
-            };
+            //var result = new UserResponse()
+            //{
+            //    Id = id,
+            //    FirstName = response.FirstName,
+            //    LastName = response.LastName,
+            //    Email = response.Email,
+            //    CreatedOn = response.CreatedOn,
+            //    ProfilePictureDataUrl = response.ProfilePictureDataUrl
+            //};
 
-            return await Result<UserResponse>.SuccessAsync(result);
+            //return await Result<UserResponse>.SuccessAsync(result);
+            return null;
         }
 
         public async Task<IResult<UserRolesResponse>> GetRolesAsync(string id)

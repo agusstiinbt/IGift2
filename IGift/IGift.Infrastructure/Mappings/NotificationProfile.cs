@@ -7,7 +7,7 @@ namespace IGift.Infrastructure.Mappings
     {
         public NotificationProfile()
         {
-            CreateMap<Notification, NotificationResponse>();
+            //CreateMap<Notification, NotificationResponse>();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace IGift.Infrastructure.Mappings.Titulos
     {
         public TitulosConectadoProfile()
         {
-            CreateMap<TitulosConectado, TitulosConectadoResponse>();
+            //CreateMap<TitulosConectado, TitulosConectadoResponse>();
         }
     }
 }

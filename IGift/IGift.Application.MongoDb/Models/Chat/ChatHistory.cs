@@ -1,11 +1,8 @@
 ﻿namespace IGift.Application.MongoDb.Models.Chat
 {
-    public class ChatHistory
+    [CollectionName("ChatHistories")]
+    public class ChatHistory : MongoDbEntity<string>
     {
-        [BsonId]
-        [BsonRepresentation(BsonType.String)]
-        public Guid Id { get; set; } = Guid.NewGuid();
-
         [BsonElement("fromUserId")]
         public string FromUserId { get; set; } = default!;
 

@@ -1,13 +1,13 @@
-using IGift.Infrastructure.MongoDb;
-using IGift.Infrastructure.MongoDb.Services.cs.Chat;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Configure<IGiftDataBaseSettings>(
     builder.Configuration.GetSection("IGiftDataBase"));
 
-builder.Services.AddSingleton<ChatService2>();
+builder.Services.AddSingleton<IChatService2, ChatService2>();
+
+builder.Services.AddTransient(typeof(INonAuditableMongoDbUnitOfWork<,>), typeof(NonAuditableMongoDbUnitOfWork<,>));
+builder.Services.AddTransient(typeof(INonAuditableMongoDbRepository<,>), typeof(NonAuditableRepository<,>));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

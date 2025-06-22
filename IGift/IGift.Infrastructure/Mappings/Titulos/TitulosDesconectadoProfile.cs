@@ -7,7 +7,7 @@ namespace IGift.Infrastructure.Mappings.Titulos
     {
         public TitulosDesconectadoProfile()
         {
-            CreateMap<TitulosDesconectado, TitulosDesconectadoResponse>();
+            //CreateMap<TitulosDesconectado, TitulosDesconectadoResponse>();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace IGift.Application.MongoDb.Interfaces.Chat
+﻿using IGift.Application.MongoDb.Models.Chat.DTOs;
+
+namespace IGift.Application.MongoDb.Interfaces.Chat
 {
     public interface IChatService
     {
@@ -14,7 +16,7 @@
         /// </summary>
         /// <param name="ToUserId">Este es el id del usuario con el que estamos chateando. Esto se usara para traer el chat correspondiente con este IdUser</param>
         /// <returns></returns>
-        Task<IResult<IEnumerable<ChatHistoryResponse>>> GetChatMessages(SearchChatById info);
+        //Task<IResult<IEnumerable<ChatHistoryRequest>>> GetChatMessages(SearchChatById info);
 
         /// <summary>
         /// Este metodo carga los bubbles(chats historicos) del costado del chatroom. Solamente trae el ultimo mensaje para ser visto desde fuera.
