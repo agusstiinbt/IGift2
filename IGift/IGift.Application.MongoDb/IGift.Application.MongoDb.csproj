@@ -16,4 +16,8 @@
     <ProjectReference Include="..\IGift.Shared\IGift.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\Models\Titles\" />
+  </ItemGroup>
+
 </Project>

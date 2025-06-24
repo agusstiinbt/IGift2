@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using IGift.Application.MongoDb.Models.Chat.DTOs;
 
 namespace IGift.Server.MongoDb.Controllers
 {
@@ -16,7 +16,12 @@ namespace IGift.Server.MongoDb.Controllers
         [HttpGet]
         public async Task<ActionResult> GetAsync()
         {
-            return Ok(await _chatService.GetAsync(null));
+            var chat = new ChatHistory
+            {
+                Message = "Hola como estas",
+            };
+            var result = await _chatService.FindAllAsync(chat);
+            return Ok();
         }
 
         [HttpPost]

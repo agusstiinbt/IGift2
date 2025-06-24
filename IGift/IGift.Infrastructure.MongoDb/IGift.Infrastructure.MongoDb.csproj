@@ -14,9 +14,4 @@
     <ProjectReference Include="..\IGift.Application.MongoDb\IGift.Application.MongoDb.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services.cs\Notifications\" />
-    <Folder Include="Services.cs\Titles\" />
-  </ItemGroup>
-
 </Project>

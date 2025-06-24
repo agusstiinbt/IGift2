@@ -1,4 +1,4 @@
-﻿namespace IGift.Application.MongoDb.Models.Attributes
+﻿namespace IGift.Application.MongoDb.Models
 {
     [AttributeUsage(AttributeTargets.Class, Inherited = false)]
     public sealed class CollectionNameAttribute : Attribute

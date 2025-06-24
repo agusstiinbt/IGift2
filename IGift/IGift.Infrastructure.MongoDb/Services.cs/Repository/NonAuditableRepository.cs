@@ -19,9 +19,21 @@
             throw new NotImplementedException();
         }
 
-        public Task<List<T>> FindAsync(FilterDefinition<T> filter)
+        public async Task<List<T>> FindAsync(T op)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = op.BuildFilterFromObject();
+
+                var resultados = await _context.Find(result).ToListAsync();
+
+                return resultados;
+            }
+            catch (Exception e)
+            {
+                // Manejo de errores
+                throw;
+            }
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -43,5 +55,6 @@
         {
             throw new NotImplementedException();
         }
+
     }
 }

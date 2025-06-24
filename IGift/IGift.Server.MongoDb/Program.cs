@@ -1,3 +1,5 @@
+using IGift.Infrastructure.MongoDb.Services.cs.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

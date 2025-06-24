@@ -1,4 +1,6 @@
-﻿namespace IGift.Infrastructure.MongoDb.Services.cs.Repository
+﻿using IGift.Application.MongoDb.Models;
+
+namespace IGift.Infrastructure.MongoDb.Services.cs.Repository
 {
     public class NonAuditableMongoDbUnitOfWork<TId, T> : INonAuditableMongoDbUnitOfWork<TId, T>
      where T : MongoDbEntity<TId>

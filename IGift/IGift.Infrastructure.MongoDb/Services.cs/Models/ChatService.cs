@@ -1,4 +1,4 @@
-﻿namespace IGift.Infrastructure.MongoDb.Services.cs.Chat
+﻿namespace IGift.Infrastructure.MongoDb.Services.cs.Models
 {
     //public class ChatService : IChatService
     //{
@@ -249,19 +249,34 @@
             _unitOfWork = unitOfWork;
         }
 
-        public async Task<List<ChatHistory>> GetAsync(FilterDefinition<ChatHistory> filter)
+        public async Task<List<ChatHistory>> FindAllAsync(ChatHistory chat)
         {
-            var filtro = Builders<ChatHistory>.Filter.Eq(c => c.FromUserId, "usuario123") &
-                Builders<ChatHistory>.Filter.Eq(c => c.Seen, false);
+            var fixedChat = new ChatHistory() { FromUserId = chat.FromUserId, ToUserId = chat.ToUserId };
 
+            var result = new List<ChatHistory>();
 
-            var repo = _unitOfWork.Repository();
-            var result = await repo.GetAllAsync();
+            var myMessagesSend = await _unitOfWork.Repository().FindAsync(fixedChat);
+            var send = myMessagesSend.Take(40).ToList();
+            myMessagesSend.Clear();
 
-            return result.ToList();
-            //var mensajes = await _unitOfWork.Find(filtro).SortByDescending(c => c.CreatedDate).Limit(20).ToListAsync();
+            //Invertimos los Ids para buscar mensajes recibidos 
+            var fromUserId = fixedChat.FromUserId;
+            var toUserId = fixedChat.ToUserId;
 
-            return null;
+            //Mensajes recibidos del mismo usuario al que envié
+            fixedChat.FromUserId = toUserId;
+            fixedChat.ToUserId = fromUserId;
+            var myMessagesReceived = await _unitOfWork.Repository().FindAsync(fixedChat);
+            var received = myMessagesReceived.Take(40).ToList();
+            myMessagesReceived.Clear();
+
+            if (send.Any())
+                result.AddRange(send);
+            
+            if (received.Any())
+                result.AddRange(received);
+
+            return result.OrderByDescending(m => m.CreatedDate).ToList();
         }
 
         public async Task CreateAsync()
@@ -278,28 +293,5 @@
 
             //await _unitOfWork.InsertOneAsync(chat);
         }
-
-        public static FilterDefinition<T> BuildFilterFromObject<T>(T filterModel)
-        {
-            var builder = Builders<T>.Filter;
-            var filters = new List<FilterDefinition<T>>();
-
-            foreach (var prop in typeof(T).GetProperties())
-            {
-                var value = prop.GetValue(filterModel);
-                if (value != null)
-                {
-                    filters.Add(builder.Eq(prop.Name, value));
-                }
-            }
-
-            return filters.Any() ? builder.And(filters) : builder.Empty;
-        }
-    }
-
-    public interface IChatService2
-    {
-        Task<List<ChatHistory>> GetAsync(FilterDefinition<ChatHistory> filter);
-        Task CreateAsync();
     }
 }

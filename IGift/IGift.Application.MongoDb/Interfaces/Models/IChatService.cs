@@ -1,6 +1,4 @@
-﻿using IGift.Application.MongoDb.Models.Chat.DTOs;
-
-namespace IGift.Application.MongoDb.Interfaces.Chat
+﻿namespace IGift.Application.MongoDb.Interfaces.Models
 {
     public interface IChatService
     {
@@ -23,5 +21,15 @@ namespace IGift.Application.MongoDb.Interfaces.Chat
         /// </summary>
         /// <returns></returns>
         Task<IResult<IEnumerable<ChatUserResponse>>> LoadChatUsers(string CurrentUserId);
+    }
+    public interface IChatService2
+    {
+        /// <summary>
+        /// Este metodo solo debe recibir un ChatHistory con los ids de los usuarios
+        /// </summary>
+        /// <param name="chat">Solo debe contener los Ids</param>
+        /// <returns></returns>
+        Task<List<ChatHistory>> FindAllAsync(ChatHistory chat);
+        Task CreateAsync();
     }
 }

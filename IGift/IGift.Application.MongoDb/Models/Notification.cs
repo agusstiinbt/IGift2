@@ -1,6 +1,6 @@
 ﻿namespace IGift.Application.MongoDb.Models
 {
-    public class Notification : Entity<int>
+    public class MyNotification : MongoDbEntity<string>
     {
         public string IdUser { get; set; } = string.Empty;
         public string Message { get; set; } = string.Empty;
