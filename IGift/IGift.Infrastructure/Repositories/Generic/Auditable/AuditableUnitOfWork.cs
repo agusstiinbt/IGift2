@@ -1,10 +1,5 @@
-﻿using System.Collections;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using IGift.Application.Interfaces.Repositories.Generic.Auditable;
-using IGift.Domain.Contracts;
-using IGift.Infrastructure.Data;
-using IGift.Shared.Wrapper;
-using LazyCache;
 using Microsoft.EntityFrameworkCore;
 
 namespace IGift.Infrastructure.Repositories.Generic.Auditable

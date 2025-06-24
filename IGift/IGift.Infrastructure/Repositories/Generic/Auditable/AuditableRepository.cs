@@ -2,8 +2,6 @@
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using IGift.Application.Interfaces.Repositories.Generic.Auditable;
-using IGift.Domain.Contracts;
-using IGift.Infrastructure.Data;
 
 namespace IGift.Infrastructure.Repositories.Generic.Auditable
 {

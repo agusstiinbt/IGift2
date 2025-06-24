@@ -1,0 +1,6 @@
+@IGift.Server.CosmosDb_HostAddress = http://localhost:5225
+
+GET {{IGift.Server.CosmosDb_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,6 +1,4 @@
-﻿using IGift.Application.MongoDb.Models;
-
-namespace IGift.Application.MongoDb.Interfaces.Models
+﻿namespace IGift.Application.MongoDb.Interfaces.Models
 {
     public interface IMyNotificationService
     {

@@ -1,5 +1,4 @@
-﻿using IGift.Domain.Contracts;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace IGift.Infrastructure.Models
 {

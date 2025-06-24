@@ -1,5 +1,4 @@
 ﻿using IGift.Application.Models.SQL.MySQL;
-using IGift.Domain.Contracts;
 using IGift.Domain.Entities;
 using IGift.Domain.Entities.SQLServer;
 using Microsoft.AspNetCore.Identity;

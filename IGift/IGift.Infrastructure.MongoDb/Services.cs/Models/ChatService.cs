@@ -272,7 +272,7 @@
 
             if (send.Any())
                 result.AddRange(send);
-            
+
             if (received.Any())
                 result.AddRange(received);
 

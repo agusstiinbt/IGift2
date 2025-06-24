@@ -8,7 +8,6 @@ using IGift.Application.Interfaces.Identity;
 using IGift.Application.OptionsPattern;
 using IGift.Application.Responses.Identity.Users;
 using IGift.Infrastructure.Models;
-using IGift.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;

@@ -1,7 +1,5 @@
 ﻿using IGift.Application.Interfaces.DDBB.Sql;
-using IGift.Infrastructure.Data;
 using IGift.Infrastructure.Models;
-using IGift.Shared.Constants;
 using Microsoft.AspNetCore.Identity;
 
 namespace IGift.Infrastructure.Services.DDBB.Sql
@@ -80,7 +78,7 @@ namespace IGift.Infrastructure.Services.DDBB.Sql
             //      //} }).GetAwaiter.GetResult();   
 
             //  }).GetAwaiter().GetResult();
-             
+
         }
         private void AddBasicUser()
         {

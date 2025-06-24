@@ -12,7 +12,6 @@ using IGift.Application.Responses.Identity.Users;
 using IGift.Application.Responses.Users;
 using IGift.Infrastructure.Models;
 using IGift.Shared.Constants;
-using IGift.Shared.Wrapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.EntityFrameworkCore;
