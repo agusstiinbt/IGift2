@@ -19,5 +19,4 @@
             return filters.Any() ? builder.And(filters) : builder.Empty;
         }
     }
-
 }

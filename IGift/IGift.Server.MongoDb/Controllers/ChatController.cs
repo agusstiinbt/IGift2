@@ -1,6 +1,4 @@
-﻿using IGift.Application.MongoDb.Models.Chat.DTOs;
-
-namespace IGift.Server.MongoDb.Controllers
+﻿namespace IGift.Server.MongoDb.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -13,7 +11,7 @@ namespace IGift.Server.MongoDb.Controllers
             _chatService = chatService;
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult> GetAsync()
         {
             var chat = new ChatHistory
